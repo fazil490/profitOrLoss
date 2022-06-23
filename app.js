@@ -26,8 +26,8 @@ function calculateProfitOrLoss(initial, quantity, current) {
             showOutput("Oh oh! the loss is " + loss + " and the loss percent is  " + lossPercentage + "%");
         } else if (current > initial*quantity) {
             var profit = (current - initial*quantity) ;
-            var profitPercentage = ((profit / current) * 100).toFixed(2);
-            showOutput("Hey! the profit is " + profit + " and the Profit percent is " + profitPercentage + "%")
+            var profitPercentage = ((profit / (initial*quantity)) * 100).toFixed(2);
+            showOutput("Hey! the profit is " + profit + " and the profit percent is " + profitPercentage + "%")
         } else {
             showOutput("No pain No gain and No gain No pain");
         }
